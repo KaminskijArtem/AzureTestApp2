@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using AzureTestApp1.Models;
+using AzureTestApp2.Models;
 
-namespace AzureTestApp1.Controllers
+namespace AzureTestApp2.Controllers
 {
     public class HomeController : Controller
     {
@@ -31,6 +31,13 @@ namespace AzureTestApp1.Controllers
             c++;
             ViewData["Test"] = c;
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult SetVar(int variable)
+        {
+            c = variable;
+            return Ok();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

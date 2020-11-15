@@ -1,6 +1,6 @@
 using System;
 
-namespace AzureTestApp1.Models
+namespace AzureTestApp2.Models
 {
     public class ErrorViewModel
     {
